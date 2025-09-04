@@ -134,7 +134,7 @@ const Movies = () => {
 
       const movieCards = await Promise.all(movies.map(async (movie) => {
         try {
-          const detailedResponse = await axios.get(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=${OMDB_API_KEY}`);
+          const detailedResponse = await axios.get(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${OMDB_API_KEY}`);
           const detailedMovie = detailedResponse.data;
 
           // Fetch TMDB ID for the movie title if not already fetched from TMDB search
