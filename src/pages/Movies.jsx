@@ -129,7 +129,7 @@ const Movies = () => {
       }));
 
       // Search for movies using OMDB API
-      const moviesResponse = await axios.get(`http://www.omdbapi.com/?s=${userInput}&apikey=${OMDB_API_KEY}`);
+      const moviesResponse = await axios.get(`https://www.omdbapi.com/?s=${userInput}&apikey=${OMDB_API_KEY}`);
       const movies = moviesResponse.data.Search;
 
       const movieCards = await Promise.all(movies.map(async (movie) => {
