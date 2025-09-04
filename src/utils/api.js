@@ -1,8 +1,9 @@
 
 import axios from 'axios';
 
-const TMDB_API_KEY = '63e61ac73f0504f8701391b26ef0f811';
-const OMDB_API_KEY = '603a67b0';
+const TMDB_API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const OMDB_API_KEY = import.meta.env.VITE_OMDB_API_KEY;
+
 const YOUTUBE_API_KEY = 'AIzaSyANAR6uFjI9DS0DoJv3BnNeF-PnHJWJR_g';
 const startingPage= Math.floor(Math.random() * 20) + 1;
 const endingPage= Math.floor(Math.random() * 30) + 25;
@@ -19,7 +20,7 @@ export const fetchTVShows = async (query) => {
 
 export const fetchMovies = async (query) => {
   try {
-    const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=${OMDB_API_KEY}`);
+    const response = await axios.get(`https://www.omdbapi.com/?s=${query}&apikey=${OMDB_API_KEY}`);
     return response.data.Search;
   } catch (error) {
     console.error('Error fetching movies:', error);
