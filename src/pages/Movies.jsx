@@ -277,7 +277,7 @@ const Movies = () => {
       {error && <p className="error">{error}</p>}
       <div className="results-container">
         {loading ? <LoadingSpinner /> : (searchResults.length === 0 ? <p></p> : searchResults)}
-      </div>g
+      </div>
       {showReviews && <ReviewPopup />}
     </div>
   );
