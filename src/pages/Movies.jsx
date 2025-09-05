@@ -199,7 +199,7 @@ const Movies = () => {
       <div className="search-result" style={{ marginBottom: '20px', marginTop: '20px', marginLeft: "5px" }} key={title}>
         <img src={imageUrl} alt={title} style={{ marginBottom: '5px', marginLeft: '10px' }} className="search-result-image" />
         <div className="search-result-content">
-          <b><h1 style={{ color: '#E76F51', marginBottom: "5px", fontSize: "30px" }} className="search-result-title">{title}</h1></b>
+          <b><h1 style={{ color: 'magenta', marginBottom: "5px", fontSize: "30px" }} className="search-result-title">{title}</h1></b>
           <p className="search-result-description" dangerouslySetInnerHTML={{ __html: description || 'No description available.' }}></p>
           <p className="search-result-cast"><strong><span style={{ color: '#E76F51', marginBottom: '5px' }}>Cast:</span> </strong> {externals.cast || 'N/A'}</p>
           {externals.imdb && <p className="search-result-rating"><strong></strong> <a href={externals.imdb} target="_blank" style={{ color: '#2A9D8F' }} rel="noopener noreferrer"><b>IMDb</b></a> - {externals.imdbRating || 'N/A'}</p>}
